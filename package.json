@@ -1,0 +1,27 @@
+{
+  "name": "ts-ssr-react",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build:client": "parcel build src/client/index.tsx -d dist/client --out-file index.js --public-url ./ ",
+    "build:server": "parcel build src/server/index.tsx -d dist/server --out-file index.js --public-url ./ --target node",
+    "start:server": "node dist/server/index.js",
+    "start": "npm run build:client && npm run build:server && npm run start:server"
+  },
+  "devDependencies": {
+    "@types/express": "^4.16.0",
+    "@types/react": "^16.4.14",
+    "@types/react-dom": "^16.0.7",
+    "nodemon": "^1.18.4",
+    "parcel-bundler": "^1.9.7",
+    "tslint": "^5.11.0",
+    "types-installer": "^1.4.0",
+    "typescript": "^3.0.3"
+  },
+  "dependencies": {
+    "express": "^4.16.3",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2"
+  }
+}
